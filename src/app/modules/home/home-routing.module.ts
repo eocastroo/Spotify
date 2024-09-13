@@ -4,9 +4,18 @@ import { HomepageComponent } from './page/homepage/homepage.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomepageComponent 
+    path:'tracks',
+    loadChildren:() => import('@modules/tracks/tracks.module').then(m => m.TracksModule)
+  },
+  {
+    path:'favorites',
+    loadChildren:() => import('@modules/favorites/favorites.module').then(m => m.FavoritesModule)
+  },
+  {
+    path:'history',
+    loadChildren:() => import('@modules/history/history.module').then(m => m.HistoryModule)
   }
+
 ];
 
 @NgModule({

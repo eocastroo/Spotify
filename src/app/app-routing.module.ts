@@ -4,10 +4,15 @@ import { HomepageComponent } from './modules/home/page/homepage/homepage.compone
 
 const routes: Routes = [ // TODO  router-outlet (padre)
     {
-        path: '', // todo privado 
+        path: 'auth', 
         component:HomepageComponent,
-        loadChildren:() => import(`./modules/home/home.module`).then(m => m.HomeModule)
+        loadChildren:() => import(`./modules/auth/auth.module`).then(m => m.AuthModule)
     },
+    {
+        path:'',
+        component: HomepageComponent,
+        loadChildren:() => import('./modules/home/home.module').then(m => m.HomeModule)
+    }
 ];
 
 @NgModule({
