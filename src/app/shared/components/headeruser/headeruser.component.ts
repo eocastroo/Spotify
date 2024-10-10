@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-headeruser',
-  standalone: true,
-  imports: [],
+  standalone: false,
   templateUrl: './headeruser.component.html',
   styleUrl: './headeruser.component.css'
 })
